@@ -68,6 +68,8 @@ python3 matrix.py
 # Last run the model. Use the latest .h5 file generated while training => [X1, X2] = load_real_samples('maps_val.npz')
 python3 testModel.py 
 
+```
+
 
 ## Citation
 If you use this code for your research, please cite the paper this code is based on: <a href="https://arxiv.org/pdf/1611.07004v1.pdf">Image-to-Image Translation Using Conditional Adversarial Networks</a>:
