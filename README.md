@@ -52,21 +52,20 @@ pip install -r requirements.txt
 
 # We need a folder that contains images with input-output next to each other, each one 256*256, so a 256*512 image and another one with more images to verify the trainning worked
 
-# I have leave a very simple set inside the gh file for reference
+# I have leave a very simple set inside the /gh folder for reference
 
-# train the model (this may take ? hours depending on GPU, on CPU you will be waiting for a bit)
+# Train the model (this may take ? hours depending on GPU, on CPU you will be waiting for a bit)
 
 # First convert the images to a numpy array => .npz
 python3 matrix.py 
 
-# Second train the model using the npz file we just created
+# Second train the model using the npz file we just created. The "important" part where to define the npz file is at the bottom.
 python3 pix2pix.py 
 
 # Third, create another matrix - numpy array with the images to validate the model modifying the parameters in the matrix.py script
 python3 matrix.py 
 
 # Last run the model. Use the latest .h5 file generated while training => [X1, X2] = load_real_samples('maps_val.npz')
-
 python3 testModel.py 
 
 
