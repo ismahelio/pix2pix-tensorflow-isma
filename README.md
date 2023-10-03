@@ -36,10 +36,12 @@ We need a folder that contains images with input-output next to each other, each
 git clone https://github.com/ismahelio/pix2pix-tensorflow-isma.git
 cd pix2pix-tensorflow
 
-# I have left a little dataset in this repo as an example, only 20 variations. I encorage you to generate your own images to test the model
+# I have left a little dataset in this repo as an example, only 20 variations. 
+# I encourage you to generate your images to test the model
 
-# Otherwise download the CMP Facades dataset (generated from http://cmp.felk.cvut.cz/~tylecr1/facade/ or http://efrosgans.eecs.berkeley.edu/pix2pix/datasets/maps.tar.gz)
-
+# Otherwise download the CMP Facades dataset 
+# (generated from http://cmp.felk.cvut.cz/~tylecr1/facade/ 
+# or http://efrosgans.eecs.berkeley.edu/pix2pix/datasets/maps.tar.gz)
 
 # Create a virtual environment
 python3 -m venv myenv
@@ -50,7 +52,8 @@ source myenv/bin/activate
 # Run requirements
 pip install -r requirements.txt
 
-# We need a folder that contains images with input-output next to each other, each one 256*256, so a 256*512 image and another one with more images to verify the trainning worked
+# We need a folder that contains images with input-output next to each other: 
+# each one 256*256, so a 256*512 image and another one with more images to verify the trainning worked
 
 # I have leave a very simple set inside the /gh folder for reference
 
@@ -62,10 +65,12 @@ python3 matrix.py
 # Second train the model using the npz file we just created. The "important" part where to define the npz file is at the bottom.
 python3 pix2pix.py 
 
-# Third, create another matrix - numpy array with the images to validate the model modifying the parameters in the matrix.py script
+# Third, create another matrix-numpy array with the images to validate the model 
+# Modify the filename parameters in matrix.py 
 python3 matrix.py 
 
-# Last run the model. Use the latest .h5 file generated while training => [X1, X2] = load_real_samples('maps_val.npz')
+# Last run the model. Use the latest .h5 file generated while training 
+# [X1, X2] = load_real_samples('maps_val.npz')
 python3 testModel.py 
 
 ```
